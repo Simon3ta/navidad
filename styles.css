@@ -1,0 +1,109 @@
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #4caf50, #1b5e20); /* Fondo navideño verde intenso */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: linear-gradient(145deg, #f7e2a7, #f5d06c); /* Fondo cálido y vibrante */
+    border: 3px solid #d4af37;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.header {
+    font-size: 28px;
+    font-weight: bold;
+    color: #b71c1c;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.letter {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    border: 2px solid #ffeb3b;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 245, 157, 0.9); /* Fondo cálido con amarillo suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.signature {
+    font-style: italic;
+    margin-top: 20px;
+    color: #d84315;
+    font-weight: bold;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #d84315;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #bf360c;
+    transform: scale(1.1);
+}
+
+.tree {
+    margin: 20px auto;
+    position: relative;
+    width: 100px;
+    height: 150px;
+}
+
+.star {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #ffd700;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid #388e3c;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.triangle.small {
+    top: 50px;
+    border-bottom: 70px solid #2e7d32;
+}
+
+.triangle.smaller {
+    top: 90px;
+    border-bottom: 60px solid #1b5e20;
+}
