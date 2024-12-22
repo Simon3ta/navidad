@@ -72,13 +72,13 @@ button:hover {
 .tree {
     margin: 20px auto;
     position: relative;
-    width: 100px;
-    height: 150px;
+    width: 160px;
+    height: 200px;
 }
 
 .star {
     position: absolute;
-    top: -20px;
+    top: -30px;
     left: 50%;
     transform: translateX(-50%);
     width: 30px;
@@ -87,23 +87,54 @@ button:hover {
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
-.triangle {
+.branch {
+    position: absolute;
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 80px solid #388e3c;
+    border-style: solid;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.branch.largest {
+    top: 20px;
+    border-width: 0 80px 70px 80px;
+    border-color: transparent transparent #1b5e20 transparent;
+}
+
+.branch.large {
+    top: 60px;
+    border-width: 0 70px 60px 70px;
+    border-color: transparent transparent #2e7d32 transparent;
+}
+
+.branch.medium {
+    top: 100px;
+    border-width: 0 60px 50px 60px;
+    border-color: transparent transparent #388e3c transparent;
+}
+
+.branch.small {
+    top: 140px;
+    border-width: 0 50px 40px 50px;
+    border-color: transparent transparent #43a047 transparent;
+}
+
+.branch.smallest {
+    top: 180px;
+    border-width: 0 40px 30px 40px;
+    border-color: transparent transparent #66bb6a transparent;
+}
+
+.trunk {
     position: absolute;
-    top: 30px;
-    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 50px;
+    background-color: #6d4c41;
+    border-radius: 5px;
 }
 
-.triangle.small {
-    top: 50px;
-    border-bottom: 70px solid #2e7d32;
-}
 
-.triangle.smaller {
-    top: 90px;
-    border-bottom: 60px solid #1b5e20;
-}
