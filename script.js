@@ -1,10 +1,25 @@
-function revealMessage() {
-    const letter = document.getElementById("letter");
-    const newMessage = document.createElement("p");
-    newMessage.textContent = "Te amo más de lo que las palabras pueden expresar. ¡Felices fiestas!";
-    newMessage.style.color = "#c62828";
-    newMessage.style.fontWeight = "bold";
-    newMessage.style.textAlign = "center";
-    newMessage.style.marginTop = "20px";
-    letter.appendChild(newMessage);
+function startSnow() {
+    // Ocultar el botón
+    document.getElementById("start-snow").style.display = "none";
+
+    // Iniciar la nieve
+    setInterval(createSnowflake, 100);
+}
+
+function createSnowflake() {
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+    snowflake.textContent = "❄";
+
+    // Generar posición y tamaño aleatorios
+    snowflake.style.left = `${Math.random() * 100}vw`;
+    snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
+
+    // Agregar el copo al cuerpo
+    document.body.appendChild(snowflake);
+
+    // Remover el copo después de que caiga
+    setTimeout(() => {
+        snowflake.remove();
+    }, 5000);
 }

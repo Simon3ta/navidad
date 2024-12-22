@@ -1,6 +1,6 @@
 body {
     font-family: 'Georgia', serif;
-    background: linear-gradient(to bottom, #4caf50, #1b5e20); /* Fondo navideño verde intenso */
+    background: linear-gradient(to bottom, #4caf50, #1b5e20);
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,18 +8,22 @@ body {
     align-items: center;
     height: 100vh;
     color: #fff;
+    overflow: hidden;
+    position: relative;
 }
 
 .container {
     width: 90%;
     max-width: 600px;
-    background: linear-gradient(145deg, #f7e2a7, #f5d06c); /* Fondo cálido y vibrante */
+    background: linear-gradient(145deg, #f7e2a7, #f5d06c);
     border: 3px solid #d4af37;
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
     color: #333;
+    position: relative;
+    z-index: 2;
 }
 
 .header {
@@ -37,7 +41,7 @@ body {
     border: 2px solid #ffeb3b;
     padding: 15px;
     border-radius: 10px;
-    background: rgba(255, 245, 157, 0.9); /* Fondo cálido con amarillo suave */
+    background: rgba(255, 245, 157, 0.9);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,13 +52,13 @@ body {
     font-weight: bold;
 }
 
-.button {
+.button-container {
     margin-top: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px;
     color: #ffffff;
     background-color: #d84315;
     border: none;
@@ -69,72 +73,22 @@ button:hover {
     transform: scale(1.1);
 }
 
-.tree {
-    margin: 20px auto;
-    position: relative;
-    width: 160px;
-    height: 200px;
-}
-
-.star {
+.snowflake {
     position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: #ffd700;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    top: -10px;
+    color: white;
+    font-size: 18px;
+    animation: fall 5s linear infinite;
+    opacity: 0.8;
 }
 
-.branch {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.branch.largest {
-    top: 20px;
-    border-width: 0 80px 70px 80px;
-    border-color: transparent transparent #1b5e20 transparent;
-}
-
-.branch.large {
-    top: 60px;
-    border-width: 0 70px 60px 70px;
-    border-color: transparent transparent #2e7d32 transparent;
-}
-
-.branch.medium {
-    top: 100px;
-    border-width: 0 60px 50px 60px;
-    border-color: transparent transparent #388e3c transparent;
-}
-
-.branch.small {
-    top: 140px;
-    border-width: 0 50px 40px 50px;
-    border-color: transparent transparent #43a047 transparent;
-}
-
-.branch.smallest {
-    top: 180px;
-    border-width: 0 40px 30px 40px;
-    border-color: transparent transparent #66bb6a transparent;
-}
-
-.trunk {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 50px;
-    background-color: #6d4c41;
-    border-radius: 5px;
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
 }
 
 
