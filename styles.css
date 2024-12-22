@@ -23,7 +23,7 @@ body {
     text-align: center;
     color: #333;
     position: relative;
-    z-index: 2;
+    z-index: 2; /* La carta está por debajo de la nieve */
 }
 
 .header {
@@ -80,6 +80,7 @@ button:hover {
     font-size: 18px;
     animation: fall 5s linear infinite;
     opacity: 0.8;
+    z-index: 1000; /* Asegura que la nieve esté encima de todo */
 }
 
 @keyframes fall {
@@ -90,5 +91,6 @@ button:hover {
         transform: translateY(100vh);
     }
 }
+
 
 
